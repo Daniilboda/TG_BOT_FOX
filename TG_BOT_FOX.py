@@ -1,9 +1,6 @@
 import json
-import os
-
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
-from my_config import token, user_id
 from datetime import datetime
 from aiogram.client.default import DefaultBotProperties
 from aiogram import F
