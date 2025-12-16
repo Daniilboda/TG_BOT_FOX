@@ -20,7 +20,6 @@ def get_first_news():
         category = news_href.split('/')[3]
         all_news_dict[news_txt] = {'Category': category, 'Link': news_href}
     all_news_dict = dict(reversed(all_news_dict.items()))
-    print(all_news_dict)
     with open('news.json', 'w', encoding='utf-8') as file_w:
         json.dump(all_news_dict, file_w, indent=3, ensure_ascii=False)
     return 'Новости сохранены в файл!'
@@ -59,6 +58,6 @@ def check_updates():
 
 def main():
     # print(get_first_news())
-    print(check_updates())
+    check_updates()
 if __name__ == "__main__":
     main()
